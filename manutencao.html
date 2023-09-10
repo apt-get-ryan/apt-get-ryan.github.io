@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Portfólio de Ryan Guimarães ">
+    <meta name="description" content="Portfólio de um desenvolvedor de software web, criativo e apaixonado por trazer soluções acessíveis e confiáveis em informática. Seja em programação, manutenção de computadores ou design, trago inovação e arte a cada projeto.">
+    <meta name="keywords" content="Portfólio,Desenvolvedor,Programador,Designer">
+    <meta name="author" content="Ryan Guimarães">
+    <link rel="icon" href="src/Images/logo.svg">
+    <title>Sobre a manutenção - Ryan Guimarães</title>
+    <link rel="stylesheet" href="/src/Styles/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/Styles/app.css">
+    <script src="/src/Scripts/PopperJS/popper.js"></script>
+    <script src="/src/Scripts/Bootstrap/bootstrap.min.js"></script>
+    <!-- <script src="/src/Scripts/ParticlesJS/particles.min.js"></script>    <link rel="stylesheet" href="src/Fonts/FontAweasome/all.min.css"> -->
+    <link rel="stylesheet" href="src/Fonts/FontAweasome/all.min.css">
+
+    <script src="/src/Scripts/Bootstrap/bs-theme-manager.js"></script>
+    <script src="/src/Scripts/custom-side-menu.js"></script>
+    <style>
+    .gallery-display-demo img {
+        width: 100%;
+    }
+    .galeria {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 1em;   
+    }
+    .galeria figure {
+        flex: 1 1 390px;
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    igure img {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        max-width: 500px;
+    }
+    </style>
+</head>
+<body class="bg-page-gradient-backround">
+    <nav id="sidemenu-container" class="nav p-3 offcanvas offcanvas-end side-menu-bg border-0" tabindex="-1" aria-labelledby="sidebarOffCanvas" data-bs-backdrop="true">
+        <div class="d-flex align-items-center justify-content-end pe-3">
+            <button class="btn no-focus-ring text-hover-emphasis" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidemenu-container" aria-controls="sidemenu-container">
+                <i class="fa fa-times fa-lg"></i>
+            </button>
+        </div> 
+        <hr>
+        <div class="overflow-auto">
+            <ul class="nav flex-column mb-auto  text-body">
+                <li class="nav-item mb-2">
+                    <a href="/" class="nav-link link-body-emphasis link-opacity-75 link-opacity-100-hover">
+                        <i class="fa fa-home fa-fw"></i>&nbsp;Home
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="design.html" class="nav-link link-body-emphasis link-opacity-75 link-opacity-100-hover">
+                        <i class="fa-solid fa-crop-simple fa-fw"></i>&nbsp; Design
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="manutencao.html" class="nav-link link-body-emphasis link-opacity-75 link-opacity-100-hover">
+                        <i class="fa-solid fa-wrench fa-fw"></i>&nbsp; Manutenção
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="desenvolvimento.html" class="nav-link link-body-emphasis link-opacity-75 link-opacity-100-hover">
+                        <i class="fa-solid fa-code fa-fw"></i>&nbsp; Desenvolvimento
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-start pe-3">
+            <div class="btn-group dropdown">
+                <button class="btn btn-link nav-link link-body-emphasis text-hover-emphasis py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" id="bs-theme-toggler">
+                    <span id="bs-theme-icon" class="d-flex align-items-center justify-content-center" style="height: 16px"></span>
+                    <span class="d-lg-none ms-2" id="bs-theme-text">Alterar tema</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="bs-theme-toggler">
+                    <button type="button" 
+                        class="dropdown-item d-flex align-items-center" 
+                        data-bs-theme-value="light"
+                        aria-pressed="false">
+                        <svg data-bs-theme-toggler-icon="" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-sun-fill me-2" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                        Claro
+                    </button>
+                    <button type="button" 
+                        class="dropdown-item d-flex align-items-center" 
+                        data-bs-theme-value="dark"
+                        aria-pressed="false">
+                        <svg data-bs-theme-toggler-icon="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill me-2" viewBox="0 0 16 16">
+                            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+                        </svg>
+                        Escuro
+                    </button>
+                    <button type="button" 
+                    class="dropdown-item d-flex align-items-center" 
+                    data-bs-theme-value="auto"
+                    aria-pressed="true">
+                        <i data-bs-theme-toggler-icon="active" class="fa-solid fa-circle-half-stroke me-2"></i>
+                        Automático
+                    </button>
+                </ul>
+            </div>         
+    </nav>
+    <div id="all-contents-wrapper">
+        <header class="p-3 sticky-top shadow custom-header">
+            <div class="container container-fluid">
+                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                    <a href="/" class="navbar-brand mb-0 h1">
+                        <img height="50" src="/src/Images/logo.svg" alt="Home">
+                    </a>
+                    <div class="header-buttons">
+                        <button class="btn outline-none no-focus-ring text-hover-emphasis" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidemenu-container" aria-controls="sidemenu-container">
+                            <i class="fa fa-bars fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="overflow-hidden">
+            <div class="container my-4">
+                <h1 class="h3 px-3 pb-2"><i class="fa-solid fa-wrench fa-fw"></i>&nbsp;Operando sua máquina
+                </h1>
+                <div class="content-box shadow-sm mt-3">
+                    <section>
+                        <h1 class="h4">Aficionado desde criança</h1>
+                        <p>Muitos garotos se entusiasmavam falando de carros e motos potentes. Já eu, me empolgava falando de computadores, placas de vídeo ou Intel vs AMD. Não demorou muito para esse interesse me levar a aprender a formatar meus próprios dispositivos e instalar os programas que eu ou meus familiares precisavam.</p>
+                        <p>Desde então nunca mais precisei me preocupar com atualizações do meu Windows. Eventualmente a programação me fez conhecer os sistemas Linux, sendo minha distribuição favorita a Mint.</p>
+                    </section>
+                </div>
+                <div class="content-box shadow-sm mt-3">
+                    <section>
+                        <h1 class="h4">Cirurgião de computadores</h1>
+                        <p>
+                            Se você possui uma máquina que está lenta, saiba que existe salvação. Para os casos que limpar o sistema não resolve, eu resolverei limpando o computador fisicamente. Sim, toda a poeira além de causar rinite na gente também causa problemas ao computador.
+                        </p>
+                        <p>
+                            Ou podemos ir um pouco além e fazer uma troca de HD, SSD se quiser realmente dar nova vida para a máquina ou a placa de vídeo se o objetivo é aumentar o desempenho para jogos.
+                        </p>
+                        <p>
+                            Ou ainda vamos resolver os problemas mais simples como um barulho esquisito ou aquecimento da máquina, trocando a pasta térmica do processador, lubrificando as ventoinhas ou em ultimo caso trocando por novos.
+                        </p>
+                        <!-- <div class="galeria"> -->
+                        <section class="card p-3 border-2 c-rounded-2 d-flex">
+                            <h1 class="card-title h5">A cirurgia</h2>
+                            <div class="row flex-column d-flex flex-nowrap justify-content-between flex-lg-row gap">
+                                <figure class="col-lg-4 pointer" data-bs-toggle="modal" data-bs-target="#modal-gallery-image" >
+                                    <img class="img-fluid" src="src/Images/Manutencao/manutencao.jpg" alt="Instalaçao de placa de vídeo">
+                                </figure>
+                                <figure class="col-lg-4 pointer" data-bs-toggle="modal" data-bs-target="#modal-gallery-image" >
+                                    <img class="img-fluid" src="src/Images/Manutencao/manutencao-2.jpg" alt="Fixando cabo de alimentação na placa de vídeo">
+                                </figure>
+                                <figure class="col-lg-4 pointer" data-bs-toggle="modal" data-bs-target="#modal-gallery-image" >
+                                    <img class="img-fluid" src="src/Images/Manutencao/manutencao-3.jpg" alt="Aplicação de ar comprimido para limpeza">
+                                </figure>
+
+                            </div>
+                        </section>
+                    </section>
+
+                </div>
+            </div>
+            <footer class="py-5 custom-bg shadow-sm">
+                <div class="container">
+                    <div>
+                        <div class="d-flex flex-column flex-lg-row gap-3">
+                            <div class="col-12 col-lg-7">
+                                <p>Agradeço por visitar meu portfólio! Se algo chamou sua atenção ou se você tem alguma dúvida, sugestão ou deseja iniciar uma colaboração, não hesite em entrar em contato comigo. </p>
+                                <p class="mb-1">Estou ansiosos para ouvir você e estarei aqui para te ajudar. Juntos, criaremos algo incrível!</p>
+                            </div>
+                            <div class="vr ar"></div>
+                            <div class="" style="min-width: 305px;">
+                                <div class="d-flex flex-column h-100 gap-2 justify-content-between ">
+                                    <p>Gostou de algo que viu? Não hesite em entrar em contato</p>
+                                    <div class="d-flex flex-column">
+                                        <a target="_blank" href="mailto:ryan.guimar10@gmail.com" class="link link-body-emphasis text-decoration-none link-opacity-75 link-opacity-100-hover">
+                                            <img src="src/Images/icons-gmail.svg" width="25">&nbsp;<span>ryan.guimar10@gmail.com</span>
+                                        </a>
+                                        <a target="_blank" style="text-shadow: 1px 1px #076f3f;" href="https://api.whatsapp.com/send?phone=5514991314167&text=Ol%C3%A1,%20tudo%20bem?%20Vi%20seu%20portf%C3%B3lio%20e%20decidi%20entrar%20em%20contato." class="link wa-link link-success text-decoration-none link-opacity-75 link-opacity-100-hover font-weight-800">
+                                            <i class="fa-brands fa-whatsapp fa-xl"></i>&nbsp;<span class="fs-5">+14</span> <span class="fs-4">99131-4167</span>
+                                        </a>
+    
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+    
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <div id="modal-gallery-image" class="modal fixed-on-top overflow-y-scroll" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" style="width: 100%; max-width: 90vw;">
+                <div class="modal-content custom-bg">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/Scripts/galeria.js"></script>
+</body>
+</html>
