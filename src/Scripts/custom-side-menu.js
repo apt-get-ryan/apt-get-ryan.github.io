@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const contentWrapper = window['all-contents-wrapper'];
+    const getScrollBarWidth = function () {
+        let div = document.createElement("div");
+        div.style.width = '100px';
+        div.style.height = '100px';
+        div.style.overflow = 'scroll';
+        div.style.top = '-200px';
+        div.style.position = 'absolute';
+        div.style.transform = 'translate(-100%)';
+        document.body.appendChild(div);
+        const scrollBarWidth = div.offsetWidth - div.clientWidth;
+        document.body.removeChild(div);
+        div = undefined;
+        return scrollBarWidth;
+    }
     window['sidemenu-container'].addEventListener('show.bs.offcanvas', (event) => {
         event.stopImmediatePropagation();
         var scrollPosition = window.scrollY === 0 ? document.querySelector("main").scrollTop : window.scrollY;
@@ -9,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             duration: 500,
             iterations: 1,
             easing: 'ease',
+            // fill: 'forwards'
         };
         const animationKeyframes = [
             {
@@ -35,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window['sidemenu-container'].addEventListener('hide.bs.offcanvas', (event) => {
         event.stopImmediatePropagation();
+        // event.stopPropagation();
+        // debugger
         let scrollPosition = document.querySelector("main").scrollTop;
         const animationTiming = {
             duration: 570,
@@ -47,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 offset: 1
             }
         ];
+        contentWrapper.style.paddingRight = (getScrollBarWidth() + 'px');
         contentWrapper.style.maxHeight = '100vh';
         window.scroll({
             top: scrollPosition
@@ -54,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contentWrapper.style.transform = 'scale(0.7) translateX(-490px)';
         contentWrapper.animate(animationKeyframes, animationTiming).onfinish = (() => {
             contentWrapper.classList.remove("shrinkfy-contents");
+            contentWrapper.style.paddingRight = '0px';
             contentWrapper.style.maxHeight = '';
             window.scroll({
                 top: scrollPosition
