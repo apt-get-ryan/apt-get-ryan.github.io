@@ -26,10 +26,19 @@
 :root .offcanvas-backdrop.show {
   opacity: 0 !important;
 }
-:root .shrinkfy-contents {
-  animation: animation_shrinkfy_page 400ms ease forwards !important;
+
+#all-contents-wrapper {
+  min-height: 100vh;
+  /* transition: scale ease 3s, transform ease 4s, max-height ease 3s; */
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--bs-dark-bg-subtle);
+  font-size: calc(1rem + 0.35vw);
+}
+.shrinkfy-contents  {
   border-radius: 1em;
-  overflow: hidden;
 }
 :root .shrinkfy-contents header {
   border-radius: 1em 1em 0 0;
@@ -37,24 +46,11 @@
 :root .shrinkfy-contents footer {
   border-radius: 0 0 1em 1em;
 }
-:root .expand-contents {
-  animation: animation_expand_page 400ms ease forwards;
-}
 :root .bg-page-gradient-backround {
   background: rgb(95, 163, 200);
   background: -moz-linear-gradient(156deg, rgb(95, 163, 200) 0%, rgb(71, 138, 228) 50%, rgb(22, 56, 139) 100%);
   background: -webkit-linear-gradient(156deg, rgb(95, 163, 200) 0%, rgb(71, 138, 228) 50%, rgb(22, 56, 139) 100%);
   background: linear-gradient(293deg, rgb(95, 163, 200) 0%, rgb(71, 138, 228) 50%, rgb(22, 56, 139) 100%);
-}
-@keyframes animation_shrinkfy_page {
-  from {
-    max-height: 100vh;
-    transform: scale(1) translateX(0);
-  }
-  to {
-    transform: scale(0.7) translateX(-480px);
-    max-height: 100vh;
-  }
 }
 
 [data-bs-theme=dark] .side-menu-bg {
@@ -103,16 +99,6 @@ footer.shadow {
   box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-#all-contents-wrapper {
-  min-height: 100vh;
-  transition: scale ease 0.3s, transform ease 0.4s;
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  background-color: var(--bs-dark-bg-subtle);
-  font-size: calc(1rem + 0.35vw);
-}
 
 .content-box {
   padding: 1em;
