@@ -29,7 +29,7 @@ function Menu() {
     }, [isOpen])
     return (
         <>
-            <nav tabIndex="-1" ref={navRef} className={mergeClassNames("bg-slate-100 fixed outline-none h-dvh w-[400px] right-0 p-4 transition-transform translate-x-full z-20 duration-500", isOpen && "translate-x-0",
+            <nav tabIndex="-1" ref={navRef} className={mergeClassNames("bg-slate-100 fixed outline-none h-dvh w-[400px] right-0 p-4 transition-transform translate-x-full z-20 duration-500", isOpen && "!translate-x-0",
                 "grid grid-rows-[auto_auto_1fr_auto_auto]"
             )}>
                 <div className="flex justify-end items-center">
