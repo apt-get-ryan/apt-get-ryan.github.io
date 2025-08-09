@@ -3,15 +3,22 @@ import MenuCloseButton from './MenuCloseButton'
 import { useMenuStore } from '@/stores/menu';
 import { mergeClassNames } from '@/utils/common';
 import { useEffect, useRef } from 'react';
+import { FaCode, FaPalette } from 'react-icons/fa6';
+import { usePathname } from 'next/navigation';
 
 function Overlay({onClose, isOpen}) {
     return (
         <div className={mergeClassNames('h-full w-full absolute z-10 hidden', isOpen && "!block")} onClick={onClose}></div>
     )
 }
-
+ 
+const menuItems = [
+    { label: "Home", href: "/", icon: <FaCode size={20}/> },
+    { label: "Design", href: "/Design", icon: <FaPalette size={20}/> },
+]
 function Menu() {
     const navRef = useRef();
+    const pathName = usePathname();
     const { isOpen, open, close} = useMenuStore();
     useEffect(()=> {
         if(isOpen === true) {
@@ -37,8 +44,14 @@ function Menu() {
                 </div>
                 <hr className='h-px my-4 border-gray-400/75'/>
                 <div className='overflow-auto'>
-                    <ul className='parei aqui'>
-                        
+                    <ul className=''>
+                        {menuItems.map((menuItem, itemIndex) => 
+                            <li key={itemIndex} className={`py-2 px-4 text-opacity-70 hover:text-opacity-100 text-slate-950 text-lg ${ pathName === menuItem.href && " text-opacity-100 pointer-events-none !text-blue-600"}`}>
+                                <a href={menuItem.href} className="flex gap-2 items-center">
+                                    {menuItem.icon} {menuItem.label}
+                                </a>
+                            </li>
+                        )}
                     </ul>
 
                 </div>

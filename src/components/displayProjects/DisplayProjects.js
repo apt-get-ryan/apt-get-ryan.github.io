@@ -1,8 +1,7 @@
 'use client';
 
-import React, {Fragment, useRef, useState, useCallback, useEffect, useMemo} from 'react';
+import React, { useRef, useState, useCallback, useEffect, useMemo} from 'react';
 import { ContentBox } from '../contentBox/ContentBox';
-import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard} from 'swiper/modules';
 

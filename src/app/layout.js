@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
 
     <html lang="pt-BR">
       <body>
-        <div className="bg-blue-500 ">
+        <div className="bg-blue-500 text-slate-950">
           <Menu/>
           <Wrapper>
             <Header/>

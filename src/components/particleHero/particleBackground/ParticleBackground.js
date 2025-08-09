@@ -1,26 +1,24 @@
 'use client';
-
 import React, {useEffect, useMemo, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from "@tsparticles/slim";
+
 
 
 function ParticleBackground() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    
-    initParticlesEngine(async engine => {
-      await loadSlim(engine);
-    }).then( () => {
-      setIsClient(true);
-    })
+       initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => {
+        setIsClient(true);
+      })
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  }
-  const options = useMemo(() => ({
+
+
+  const options = {
     fullScreen: {enable: false },
     background: {
       color: "",
@@ -41,10 +39,9 @@ function ParticleBackground() {
     particles: {
       zIndex: 1,
       number: {
-        value: 80,
+        value: 70,
         density: {
-          enable: true,
-          value_area: 800
+          enable: false,
         }
       },
       color: {
@@ -61,7 +58,6 @@ function ParticleBackground() {
         enable: true,
         color: "#000000",
         distance: 150,
-        enable: true,
         opacity: 0.4,
         width: 2,
       },
@@ -69,34 +65,29 @@ function ParticleBackground() {
         value: 0.3,
         random: false,
         anim: {
-          enable: false,
-          speed: 1,
-          opacityMin: 0.1
+          enable: false
         }
       },
       size: {
         value: 5,
         random: true,
         anim: {
-          enable: false,
-          speed: 40,
-          size_min: 0.1,
-          sync: false
+          enable: false
         }
       },
       move: {
         enable: true,
-        speed: 3,
+        speed: 2.2,
         direction: "none",
         random: false,
         straight: false,
         outMode: "out",
-        rotateX: 600,
-        rotateY: 1200
+        rotateX: 0,
+        rotateY: 0
       }
     },
     
-  }))
+  }
 
   return (
     <>
