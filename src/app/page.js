@@ -3,25 +3,24 @@ import ParticleHero from "@/components/particleHero/ParticleHero";
 import { FaFaceSmileWink } from "react-icons/fa6";
 import Image from "next/image";
 import { DisplayProjects } from "@/components/displayProjects/DisplayProjects";
-
+import motion from "motion"
 
 
 export default function Home() {
     return (
         <div>
             <ParticleHero/>
-            <div className="mx-auto text-2xl container font-medium px-6 my-4">
-                <span className="flex items-center">
+
+            <div className="container max-w-screen-xl mx-auto px-4">
+                <span className="flex items-center text-2xl px-1 my-4 font-medium">
                     <FaFaceSmileWink className="inline"/>&nbsp;Olá mundo!
                 </span>
-            </div>
-            <div className="container mx-auto px-4">
                 <ContentBox className="my-4">
                     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-items-center items-center">
                         <div className="col-span-2">
                             {/* <h2 className="mb-2 text-lg font-medium">Sobre Mim</h2> */}
                             <p className="mb-2">Meu nome é Ryan Guimarães e sou Desenvolvedor com foco em <strong>React</strong>. Tenho formação técnica e superior em andamento em Análise e Desenvolvimento de Sistemas, e uma base sólida em desenvolvimento web adquirida tanto em ambiente corporativo quanto em projetos pessoais.</p>
-                            <p className="mb-2">Atuei profissionalmente com tecnologias como <strong>C#, ASP.NET MVC, PL/SQL e JavaScript,</strong> desenvolvendo sistemas internos e automatizando processos em uma grande empresa de distribuição. Nos meus estudos e projetos pessoais, me aproximei do ecossistema <strong>React</strong> através do <strong>Next.js</strong> e venho me aprofundando com entusiasmo em práticas modernas de Front-End, como o uso do <strong>Zustand</strong> para gerenciamento de estado e a estilização com <strong>TailwindCSS</strong> — duas ferramentas que me ajudam a construir interfaces responsivas e agradáveis de forma eficiente.</p>
+                            <p className="mb-2">Atuei profissionalmente com tecnologias como <strong>Bootstrap, JQuery, C#, ASP.NET MVC, Oracle SQL e JavaScript,</strong> desenvolvendo sistemas internos e automatizando processos em uma grande empresa de distribuição. Nos meus estudos e projetos pessoais, me aproximei do ecossistema <strong>React</strong> através do <strong>Next.js</strong> e venho me aprofundando com entusiasmo em práticas modernas de Front-End, como o uso do <strong>Zustand</strong> para gerenciamento de estado e a estilização com <strong>TailwindCSS</strong> — duas ferramentas que me ajudam a construir interfaces responsivas e agradáveis de forma eficiente.</p>
                             <p className="mb-2">Tenho conhecimento funcional de <strong>Redux</strong> e <strong>MobX</strong>, e estou motivado a utilizá-los com maior profundidade conforme as necessidades do time. Possuo boas noções de responsividade, versionamento com <strong>Git</strong> e estou habituado a trabalhar em ambientes que valorizam metodologias ágeis.</p>
                         </div>
                         <div>

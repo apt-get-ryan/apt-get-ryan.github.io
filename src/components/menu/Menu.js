@@ -3,7 +3,7 @@ import MenuCloseButton from './MenuCloseButton'
 import { useMenuStore } from '@/stores/menu';
 import { mergeClassNames } from '@/utils/common';
 import { useEffect, useRef } from 'react';
-import { FaCode, FaPalette } from 'react-icons/fa6';
+import { FaCode, FaPalette, FaUserGear } from 'react-icons/fa6';
 import { usePathname } from 'next/navigation';
 
 function Overlay({onClose, isOpen}) {
@@ -15,6 +15,7 @@ function Overlay({onClose, isOpen}) {
 const menuItems = [
     { label: "Home", href: "/", icon: <FaCode size={20}/> },
     { label: "Design", href: "/Design", icon: <FaPalette size={20}/> },
+    { label: "Habilidades", href: "/Habilidades", icon: <FaUserGear size={20}/>}
 ]
 function Menu() {
     const navRef = useRef();

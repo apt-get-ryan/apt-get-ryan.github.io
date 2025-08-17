@@ -10,7 +10,7 @@ import projectsData from '@/data/projectsData';
 
 import 'swiper/css/bundle';
 import "./custom-swiper.css";
-import { FaClipboardCheck } from 'react-icons/fa6';
+import { FaClipboardCheck, FaGithub } from 'react-icons/fa6';
 import { StyledButton } from '../styledButton/StyledButton';
 
 
@@ -93,10 +93,12 @@ export const DisplayProjects = () => {
           </Swiper>
         </ContentBox>
         <ContentBox className={"grid grid-cols-1 grid-rows-[auto,1fr,auto]"}>
-          <h3 className='text-xl mb-1 font-medium'>{projectsData[projectIndex].title}</h3>
+          <h3 className='text-xl mb-1 font-bold'>{projectsData[projectIndex].title}</h3>
           {projectsData[projectIndex].description}
-          <StyledButton variant="blue">
-            Acessar GitHub
+          <StyledButton variant="black">
+            <div className='flex gap-1 items-center justify-center'>
+              <FaGithub className='inline align-middle'/> Acessar GitHub
+            </div>
           </StyledButton>
         </ContentBox>
       </div>

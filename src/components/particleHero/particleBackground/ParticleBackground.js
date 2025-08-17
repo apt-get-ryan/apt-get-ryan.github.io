@@ -13,7 +13,10 @@ function ParticleBackground() {
         await loadSlim(engine);
       }).then(() => {
         setIsClient(true);
-      })
+      }).catch((err) => {
+        console.log(err);
+        window.location.reload();
+      });
   }, []);
 
 

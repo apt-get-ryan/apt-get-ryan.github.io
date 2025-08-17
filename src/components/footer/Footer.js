@@ -15,7 +15,7 @@ export const Footer = () => {
     <footer className={
       "bg-[#e7e7e7] shadow-lg shadow-black"
       }>
-      <div className="container grid grid-cols-12 gap-x-6 gap-y-2 mx-auto py-8 px-6">
+      <div className="container max-w-screen-xl grid grid-cols-12 gap-x-6 gap-y-2 mx-auto py-8 px-6">
         <div className='col-span-12 md:col-span-8'>
           <img src="/logo.svg" className=' mr-4 h-10 w-10 inline' />
           <span className='text-lg font-medium'>
