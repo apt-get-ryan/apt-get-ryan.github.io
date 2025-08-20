@@ -1,9 +1,8 @@
-import { ContentBox } from "@/components/contentBox/ContentBox";
-import ParticleHero from "@/components/particleHero/ParticleHero";
+import { ContentBox } from "@/components/ContentBox/ContentBox";
+import ParticleHero from "@/components/ParticleHero/ParticleHero";
 import { FaFaceSmileWink } from "react-icons/fa6";
 import Image from "next/image";
-import { DisplayProjects } from "@/components/displayProjects/DisplayProjects";
-import motion from "motion"
+import { DisplayProjects } from "@/components/DisplayProjects/DisplayProjects";
 
 
 export default function Home() {

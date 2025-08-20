@@ -1,4 +1,4 @@
-import { ContentBox } from "@/components/contentBox/ContentBox";
+import { ContentBox } from "@/components/ContentBox/ContentBox";
 import { FaPalette } from "react-icons/fa6";
 import Image  from "next/image";
 export default function Design() {

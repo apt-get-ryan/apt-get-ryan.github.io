@@ -4,19 +4,21 @@ import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from "@tsparticles/slim";
 
 
+let initialized = false;
+async function ensureParticlesInit() {
+  if(!initialized) {
+    await initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    });
+    initialized = true;
+  }
+}
 
 function ParticleBackground() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-       initParticlesEngine(async (engine) => {
-        await loadSlim(engine);
-      }).then(() => {
-        setIsClient(true);
-      }).catch((err) => {
-        console.log(err);
-        window.location.reload();
-      });
+    ensureParticlesInit().then(() => setIsClient(true));
   }, []);
 
 

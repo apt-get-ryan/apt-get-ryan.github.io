@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useCallback, useEffect, useMemo} from 'react';
-import { ContentBox } from '../contentBox/ContentBox';
+import { ContentBox } from '../ContentBox/ContentBox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard} from 'swiper/modules';
 
@@ -11,7 +11,7 @@ import projectsData from '@/data/projectsData';
 import 'swiper/css/bundle';
 import "./custom-swiper.css";
 import { FaClipboardCheck, FaGithub } from 'react-icons/fa6';
-import { StyledButton } from '../styledButton/StyledButton';
+import { StyledButton } from '../StyledButton/StyledButton';
 
 
 
@@ -35,13 +35,13 @@ export const DisplayProjects = () => {
     let foundIndex = 0;
 
     for(let i = 0; i < slidesPerProject.length; i++) {
-      const nextSlides = acumulator + slidesPerProject[i] || 0;
+      const nextSlides = acumulator + slidesPerProject[i];
       if (slideIndex < nextSlides) {
         foundIndex = i;
         break;
       }
 
-      acumulator += nextSlides;
+      acumulator = nextSlides;
     }
     setProjectIndex(foundIndex);
   }, [slideIndex])
@@ -78,7 +78,7 @@ export const DisplayProjects = () => {
                         <div className="relative w-full h-60 flex justify-center items-center">
                           <img 
                             src={imgSrc}
-                            className='object-cover h-64'
+                            className='object-cover select-none h-64'
                             alt={project.altText}
                             loading='lazy'
                           />
@@ -95,7 +95,7 @@ export const DisplayProjects = () => {
         <ContentBox className={"grid grid-cols-1 grid-rows-[auto,1fr,auto]"}>
           <h3 className='text-xl mb-1 font-bold'>{projectsData[projectIndex].title}</h3>
           {projectsData[projectIndex].description}
-          <StyledButton variant="black">
+          <StyledButton className={"w-full"} target="_blank" href={projectsData[projectIndex].githubLink} variant="black">
             <div className='flex gap-1 items-center justify-center'>
               <FaGithub className='inline align-middle'/> Acessar GitHub
             </div>

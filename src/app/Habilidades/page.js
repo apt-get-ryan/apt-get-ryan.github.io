@@ -1,4 +1,4 @@
-import { ContentBox } from '@/components/contentBox/ContentBox';
+import { ContentBox } from '@/components/ContentBox/ContentBox';
 import { FaUserGear } from "react-icons/fa6";
 import React from 'react'
 

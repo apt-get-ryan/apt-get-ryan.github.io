@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect } from 'react';
-import ParticleBackground from './particleBackground/ParticleBackground'
+import ParticleBackground from './ParticleBackground/ParticleBackground.js'  
 import { FaFile, FaGithub } from 'react-icons/fa6'
-import { StyledButton } from '../styledButton/StyledButton'
+import { StyledButton } from '@/components/StyledButton/StyledButton'
 
 
 function ParticleHero() {
@@ -17,7 +17,7 @@ function ParticleHero() {
                 <h1 className='text-[calc(1.2rem+1.5vw)] font-semibold inline-block mb-4'>Ryan Guimarães</h1><br/>
                 <h2 className="text-[calc(2rem+1.5vw)] font-black inline">Desenvolvedor <span className='text-blue-600'>React</span>,<br/>Técnico e Designer</h2>
                 <br />
-                <StyledButton target="_blank" download href="https://drive.google.com/file/d/1AK5BSBFU2LQczaZtUExpj2urxKq5dxRQ/view?usp=sharing" variant="blue" className={"mt-4 ml-1 inline-block"}>
+                <StyledButton target="_blank" href="https://drive.google.com/file/d/1AK5BSBFU2LQczaZtUExpj2urxKq5dxRQ/view?usp=sharing" variant="blue" className={"mt-4 ml-1 inline-block"}>
                   <div className='flex gap-1 items-center justify-center'>
                     <FaFile className='inline align-middle'/> Currículo
                   </div>

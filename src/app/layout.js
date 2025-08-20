@@ -1,10 +1,10 @@
 import "./globals.css";
-import Header from "@/components/header/Header";
-import Menu from "@/components/menu/Menu";
-import { Wrapper } from "@/components/wrapper/Wrapper";
+import Header from "@/components/Header/Header";
+import Menu from "@/components/Menu/Menu";
+import { Wrapper } from "@/components/Wrapper/Wrapper";
 import { useMenuStore } from "@/stores/menu";
-import { MainSection } from "@/components/mainSection/MainSection";
-import { Footer } from "@/components/footer/Footer";
+import { MainSection } from "@/components/MainSection/MainSection";
+import { Footer } from "@/components/Footer/Footer";
 
 export const metadata = {
   title: 'Portfólio - Ryan Guimarães',
@@ -13,6 +13,8 @@ export const metadata = {
     icon: "/logo.svg",
   },
 }
+
+
 
 export default function RootLayout({ children }) {
   
