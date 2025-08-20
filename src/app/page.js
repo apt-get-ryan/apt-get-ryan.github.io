@@ -1,7 +1,6 @@
 import { ContentBox } from "@/components/ContentBox/ContentBox";
 import ParticleHero from "@/components/ParticleHero/ParticleHero";
 import { FaFaceSmileWink } from "react-icons/fa6";
-import Image from "next/image";
 import { DisplayProjects } from "@/components/DisplayProjects/DisplayProjects";
 
 
@@ -24,7 +23,7 @@ export default function Home() {
                         </div>
                         <div>
                             <div className="relative aspect-square w-[300px] xl:w-[350px]">
-                                <Image src="/images/minha-foto.jpeg" alt="Jovem sorrindo em uma praça com árvores e bancos ao fundo, em um dia claro." fill />
+                                <img src="/images/minha-foto.jpeg" alt="Jovem sorrindo em uma praça com árvores e bancos ao fundo, em um dia claro." />
                             </div>
 
                         </div>
