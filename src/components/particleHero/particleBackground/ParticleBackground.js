@@ -22,7 +22,6 @@ function ParticleBackground() {
   }, []);
 
 
-
   const options = {
     fullScreen: {enable: false },
     background: {
@@ -38,15 +37,16 @@ function ParticleBackground() {
         onHover: {
           enable: false,
           mode: "repulse",
+          
         }
       }
     },
     particles: {
       zIndex: 1,
       number: {
-        value: 70,
+        value: 140,
         density: {
-          enable: false,
+          enable: true,
         }
       },
       color: {
