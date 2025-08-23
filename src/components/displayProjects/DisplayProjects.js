@@ -74,7 +74,7 @@ export const DisplayProjects = () => {
                 return project.imageSources.map( 
                   (imgSrc, imgIndex) => {
                     return (
-                      <SwiperSlide key={`${index}-${imgIndex}`} className='bg-slate-300 !flex justify-center items-center'>
+                      <SwiperSlide key={`${index}-${imgIndex}`} className='bg-slate-300 dark:bg-[#0a121a] flex! justify-center items-center'>
                         <div className="relative w-full h-60 flex justify-center items-center">
                           <img 
                             src={imgSrc}
@@ -92,7 +92,7 @@ export const DisplayProjects = () => {
             }
           </Swiper>
         </ContentBox>
-        <ContentBox className={"grid grid-cols-1 grid-rows-[auto,1fr,auto]"}>
+        <ContentBox className={"grid grid-cols-1 grid-rows-[auto_1fr_auto]"}>
           <h3 className='text-xl mb-1 font-bold'>{projectsData[projectIndex].title}</h3>
           {projectsData[projectIndex].description}
           <StyledButton className={"w-full"} target="_blank" href={projectsData[projectIndex].githubLink} variant="black">

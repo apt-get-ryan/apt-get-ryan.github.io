@@ -4,13 +4,13 @@ import { ThemeProvider } from 'next-themes';
 const AppWrapper = ({children, ...props}) => {
   return (
     <div {...props} >
-      {/* <ThemeProvider
-        attribute="class"
+      <ThemeProvider
+        attribute="data-theme"
         defaultTheme='system'
         enableSystem={true}
-      > */}
+      >
         {children}
-      {/* </ThemeProvider> */}
+      </ThemeProvider>
     </div>
   )
 }

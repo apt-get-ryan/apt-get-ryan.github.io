@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
   
   return (
 
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body>
-        <AppWrapper className="bg-blue-500 text-slate-950">
+        <AppWrapper className="bg-blue-500 text-slate-950 dark:text-slate-50">
           <Menu/>
           <Wrapper>
             <Header/>

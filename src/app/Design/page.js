@@ -4,12 +4,12 @@ import Image  from "next/image";
 export default function Design() {
   return (
     <div>
-      <div className="mx-auto text-2xl container max-w-screen-xl font-medium px-6 my-4">
+      <div className="mx-auto text-2xl container max-w-(--breakpoint-xl) font-medium px-6 my-4">
         <span className="flex items-center">
           <FaPalette className="inline"/>&nbsp;Olá mundo!
         </span>
       </div>
-      <ContentBox className={"container max-w-screen-xl mx-auto px-4"}>
+      <ContentBox className={"container max-w-(--breakpoint-xl) mx-auto px-4"}>
         <p className="mb-2">Durante a pandemia, quando tudo parecia parado, encontrei um refúgio inesperado: a edição de imagens. Comecei sem saber muito, só com curiosidade e tempo livre.</p>
         <p className="mb-2">
           Com tutoriais na internet e testando por conta própria, fui aprendendo aos poucos. Cada imagem que eu editava era uma forma de escapar do caos lá fora — quase como uma terapia. Com o tempo, fui pegando o jeito, e o que era só um hobbie virou possibilidades infinitas.
@@ -29,7 +29,7 @@ export default function Design() {
           </div>
         </div>
       </ContentBox> */}
-      <ContentBox className={"container max-w-screen-xl mx-auto my-6 mt-4 px-4"}>
+      <ContentBox className={"container max-w-(--breakpoint-xl) mx-auto my-6 mt-4 px-4"}>
         <div className="relative columns-3xs lg:columns-3 w-full grid-cols-1 gap-2">
           <img src={"/images/design/yeshua-promocao.jpg"} className="w-full mb-2"/>
           <img src={"/images/design/post.jpg"} className="w-full  mb-2"/>

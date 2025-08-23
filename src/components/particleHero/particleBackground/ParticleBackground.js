@@ -2,7 +2,7 @@
 import React, {useEffect, useMemo, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from "@tsparticles/slim";
-
+import { useTheme } from 'next-themes';
 
 let initialized = false;
 async function ensureParticlesInit() {
@@ -16,6 +16,7 @@ async function ensureParticlesInit() {
 
 function ParticleBackground() {
   const [isClient, setIsClient] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     ensureParticlesInit().then(() => setIsClient(true));
@@ -61,7 +62,7 @@ function ParticleBackground() {
       },
       links: {
         enable: true,
-        color: "#000000",
+        color: "#737373",
         distance: 150,
         opacity: 0.4,
         width: 2,

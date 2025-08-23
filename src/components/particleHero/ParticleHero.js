@@ -13,7 +13,7 @@ function ParticleHero() {
     <div className='relative overflow-hidden'>
         <ParticleBackground/>
         <div className="absolute left-0 top-0 flex w-full h-full justify-center items-center ">
-            <div className='px-6 container max-w-screen-xl text-center'>
+            <div className='px-6 container max-w-(--breakpoint-xl) text-center'>
                 <h1 className='text-2xl md:text-3xl font-bold inline-block mb-1'>Ryan Guimarães</h1><br/>
                 <h2 className="text-3xl md:text-4xl font-black inline">Desenvolvedor <span className='text-blue-600'>React</span>,<br/>Técnico e Designer</h2>
                 <br />
