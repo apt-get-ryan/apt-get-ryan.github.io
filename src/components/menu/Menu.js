@@ -6,6 +6,8 @@ import { useEffect, useRef } from 'react';
 import { FaCode, FaPalette, FaUserGear } from 'react-icons/fa6';
 import { usePathname } from 'next/navigation';
 import { FocusTrap } from 'focus-trap-react';
+import { useTheme } from 'next-themes';
+
 function Overlay({onClose, isOpen}) {
     return (
         <div role="presentation" aria-hidden={!isOpen} className={mergeClassNames('h-full w-full absolute z-10 hidden', isOpen && "!block")} onClick={onClose}></div>
@@ -21,6 +23,9 @@ function Menu() {
     const navRef = useRef();
     const pathName = usePathname();
     const { isOpen, open, close} = useMenuStore();
+    const { theme, systemTheme, setTheme} = useTheme();
+
+
     useEffect(()=> {
         if(isOpen === true) {
             navRef.current.focus();
@@ -57,6 +62,10 @@ function Menu() {
                   </ul>
 
               </div>
+              <hr className='h-px my-4 border-gray-400/75'/>
+              <button onClick={() => setTheme("light")} >Claro</button>
+              <button onClick={() => setTheme("dark")}>Escuro</button>
+              <button onClick={() => setTheme("system")}>System</button>
           </nav>
           <Overlay onClose={close} isOpen={isOpen}/>
         </div>
