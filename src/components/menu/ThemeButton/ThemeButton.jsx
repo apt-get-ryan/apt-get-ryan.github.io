@@ -7,20 +7,15 @@ import { mergeClassNames } from '@/utils/common';
 
 function ThemeButton() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true));
 
   let icon = null;
 
-  if(mounted) {
-    if( theme == "dark") {
-      icon = <BsMoonStarsFill/>
-    } else if ( theme == "light") {
-      icon = <BsSunFill/>
-    } else {
-      icon = <BsCircleHalf/>
-    }
-
+  if( theme == "dark") {
+    icon = <BsMoonStarsFill/>
+  } else if ( theme == "light") {
+    icon = <BsSunFill/>
+  } else {
+    icon = <BsCircleHalf/>
   }
   return (
     <Popover.Root>
