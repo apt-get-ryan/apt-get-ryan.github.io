@@ -7,7 +7,19 @@ import { mergeClassNames } from '@/utils/common';
 
 function ThemeButton() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <button className="inline-flex gap-x-2 justify-center items-center">
+        <BsCircleHalf /> Selecionar tema
+      </button>
+    );
+  }
   let icon = null;
 
   if( theme == "dark") {
@@ -20,7 +32,7 @@ function ThemeButton() {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button suppressHydrationWarning className='inline-flex gap-x-2 justify-center items-center'>
+        <button className='inline-flex gap-x-2 justify-center items-center'>
           {icon} Selecionar tema
         </button>
 

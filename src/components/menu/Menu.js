@@ -17,16 +17,6 @@ function Overlay({onClose, isOpen}) {
         <div role="presentation" aria-hidden={!isOpen} className={mergeClassNames('h-full w-full absolute z-10 hidden', isOpen && "block!")} onClick={onClose}></div>
     )
 }
-
-const PopoverBtn = () => {
-    const { theme, systemTheme, resolvedTheme} = useTheme();
-    const icon = <BsCircleHalf/>
-    return (
-        <button className='w-12'>
-            {icon}
-        </button>
-    )
-}
  
 const menuItems = [
     { label: "Home", href: "/", icon: <FaCode size={20}/> },
@@ -36,9 +26,7 @@ const menuItems = [
 function Menu() {
     const navRef = useRef();
     const pathName = usePathname();
-    const { isOpen, open, close} = useMenuStore();
-    const { theme, systemTheme, resolvedTheme, setTheme} = useTheme();
-    const [isPopoverOpen, setIsPopoverOver] = useState(false);
+    const { isOpen, close} = useMenuStore();
 
     useEffect(()=> {
         if(isOpen === true) {
@@ -53,6 +41,7 @@ function Menu() {
         }
 
         
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOpen])
     return (
       <FocusTrap active={isOpen}>
@@ -77,7 +66,7 @@ function Menu() {
 
             </div>
             <hr className='h-px my-4 border-gray-400/75'/>
-            <div>
+            <div suppressHydrationWarning>
                 <ThemeButton/>
         
             </div>

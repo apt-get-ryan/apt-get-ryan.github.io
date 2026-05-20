@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import React from 'react';
@@ -30,7 +32,7 @@ export const Footer = () => {
         </div>
 
         <div className='row-span-2 col-span-12 md:col-span-4 md:flex md:flex-col justify-center items-start py-6 grid-row'>
-          <StyledButton target="_blank" href="https://drive.google.com/file/d/1AK5BSBFU2LQczaZtUExpj2urxKq5dxRQ/view?usp=sharing" variant="blue" className={"mt-4 ml-1 inline-block w-full"}>
+          <StyledButton target="_blank" href="https://drive.google.com/file/d/13sUeMy9wkHxUlrVHAsb7f4ORF_ULNiCP/view?usp=sharing" variant="blue" className={"mt-4 ml-1 inline-block w-full"}>
             <div className='flex gap-1 items-center justify-center'>
               <FaFile className='inline align-middle'/> Currículo
             </div>

@@ -17,7 +17,7 @@ function ParticleHero() {
                 <h1 className='text-2xl md:text-3xl font-bold inline-block mb-1'>Ryan Guimarães</h1><br/>
                 <h2 className="text-3xl md:text-4xl font-black inline">Desenvolvedor <span className='text-blue-600'>React</span>,<br/>Técnico e Designer</h2>
                 <br />
-                <StyledButton target="_blank" href="https://drive.google.com/file/d/1AK5BSBFU2LQczaZtUExpj2urxKq5dxRQ/view?usp=sharing" variant="blue" className={"mt-4  inline-block"}>
+                <StyledButton target="_blank" href="https://drive.google.com/file/d/13sUeMy9wkHxUlrVHAsb7f4ORF_ULNiCP/view?usp=sharing" variant="blue" className={"mt-4  inline-block"}>
                   <div className='flex gap-1 items-center justify-center'>
                     <FaFile className='inline align-middle'/> Currículo
                   </div>

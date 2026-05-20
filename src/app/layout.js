@@ -9,7 +9,7 @@ import AppWrapper from "@/components/AppWrapper";
 
 export const metadata = {
   title: 'Portfólio - Ryan Guimarães',
-  description: 'Portfólio de Ryan Guimarães, Desenvolvedor React',
+  description: 'Portfólio de Ryan Guimarães, desenvolvedor fullstack, React e Node.js',
    icons: {
     icon: "/logo.svg",
   },

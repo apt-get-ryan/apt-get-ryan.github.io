@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ContentBox } from "@/components/ContentBox/ContentBox";
 import ParticleHero from "@/components/ParticleHero/ParticleHero";
 import { FaFaceSmileWink } from "react-icons/fa6";
@@ -17,7 +18,7 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 justify-items-center items-center">
                         <div className="col-span-2">
                             {/* <h2 className="mb-2 text-lg font-medium">Sobre Mim</h2> */}
-                            <p className="mb-2">Meu nome é Ryan Guimarães e sou Desenvolvedor com foco em <strong>React</strong>. Tenho formação técnica e superior em andamento em Análise e Desenvolvimento de Sistemas, e uma base sólida em desenvolvimento web adquirida tanto em ambiente corporativo quanto em projetos pessoais.</p>
+                            <p className="mb-2">Meu nome é Ryan Guimarães e sou Desenvolvedor com foco em <strong>React</strong> e <strong>Node.js</strong>. Tenho formação técnica e superior em andamento em Análise e Desenvolvimento de Sistemas, e uma base sólida em desenvolvimento web adquirida tanto em ambiente corporativo quanto em projetos pessoais.</p>
                             <p className="mb-2">Atuei profissionalmente com tecnologias como <strong>Bootstrap, JQuery, C#, ASP.NET MVC, Oracle SQL e JavaScript,</strong> desenvolvendo sistemas internos e automatizando processos em uma grande empresa de distribuição. Nos meus estudos e projetos pessoais, me aproximei do ecossistema <strong>React</strong> através do <strong>Next.js</strong> e venho me aprofundando com entusiasmo em práticas modernas de Front-End, como o uso do <strong>Zustand</strong> para gerenciamento de estado e a estilização com <strong>TailwindCSS</strong> — duas ferramentas que me ajudam a construir interfaces responsivas e agradáveis de forma eficiente.</p>
                             <p className="mb-2">Tenho conhecimento funcional de <strong>Redux</strong> e <strong>MobX</strong>, e estou motivado a utilizá-los com maior profundidade conforme as necessidades do time. Possuo boas noções de responsividade, versionamento com <strong>Git</strong> e estou habituado a trabalhar em ambientes que valorizam metodologias ágeis.</p>
                         </div>
@@ -45,102 +46,5 @@ export default function Home() {
                 <DisplayProjects/>
             </div>
         </div>
-        
-
-    // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-(family-name:--font-geist-sans)">
-    //   <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-    //     <Image
-    //       className="dark:invert"
-    //       src="/next.svg"
-    //       alt="Next.js logo"
-    //       width={180}
-    //       height={38}
-    //       priority
-    //     />
-    //     <ol className="list-inside list-decimal text-sm text-center sm:text-left font-(family-name:--font-geist-mono)">
-    //       <li className="mb-2">
-    //         Get started by editing{" "}
-    //         <code className="bg-black/5 dark:bg-white/6 px-1 py-0.5 rounded font-semibold">
-    //           src/app/page.js
-    //         </code>
-    //         .
-    //       </li>
-    //       <li>Save and see your changes instantly.</li>
-    //     </ol>
-
-    //     <div className="flex gap-4 items-center flex-col sm:flex-row">
-    //       <a
-    //         className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         <Image
-    //           className="dark:invert"
-    //           src="/vercel.svg"
-    //           alt="Vercel logomark"
-    //           width={20}
-    //           height={20}
-    //         />
-    //         Deploy now
-    //       </a>
-    //       <a
-    //         className="rounded-full border border-solid border-black/8 dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-    //         href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         Read our docs
-    //       </a>
-    //     </div>
-    //   </main>
-    //   <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/file.svg"
-    //         alt="File icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Learn
-    //     </a>
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/window.svg"
-    //         alt="Window icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Examples
-    //     </a>
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/globe.svg"
-    //         alt="Globe icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Go to nextjs.org →
-    //     </a>
-    //   </footer>
-    // </div>
     );
 }

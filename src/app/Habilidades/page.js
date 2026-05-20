@@ -7,11 +7,17 @@ const Habilidades = () => {
     "C#",
     "ASP.NET MVC",
     "Bootstrap",
+    "JQuery",
     "React",
     "Next.JS",
+    "TypeScript",
     "Zustand",
     "TailwindCSS",
+    "DaisyUI",
+    "MantineUI",
     "Oracle SQL",
+    "MySQL",
+    "MongoDB",
     "Git",
     "Photoshop",
     "Canva",
@@ -20,6 +26,8 @@ const Habilidades = () => {
     "Figma",
     "UML",
     "Node.Js",
+    "Express",
+    "Sequelize"
   ];
   return (
     <div className='mx-auto container max-w-(--breakpoint-xl) px-6 my-4'>

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { ContentBox } from "@/components/ContentBox/ContentBox";
 import { FaPalette } from "react-icons/fa6";
 import Image  from "next/image";
