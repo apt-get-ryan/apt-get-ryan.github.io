@@ -36,12 +36,11 @@ export default function Home() {
                         Este portfólio foi desenvolvido utilizando <strong>React.js</strong> e <strong>Next.js</strong>, framework moderno que proporciona alto desempenho e uma ótima experiência para o usuário. Para o gerenciamento de estado, implementei a biblioteca <strong>Zustand</strong>, garantindo leveza e simplicidade na arquitetura da aplicação. A estilização da interface foi feita com <strong>TailwindCSS</strong>, otimizando o design responsivo e a produtividade no desenvolvimento front-end. Também integrei bibliotecas <strong>JavaScript</strong> para complementar funcionalidades e melhorar a interatividade da aplicação.
                     </p>
                     <p className="mb-2">
-                        Minha história com a programação começou antes mesmo do curso, quando dei meus primeiros passos escrevendo códigos simples em <strong>Python</strong>. Foi ali que descobri um novo mundo — e logo em seguida, me encantei pelo desenvolvimento web. Sempre fui fascinado(a) pelas infinitas possibilidades que a internet oferece, seja no entretenimento, na informação ou na forma como conecta pessoas e ideias.
+                        Minha história com a programação começou antes mesmo do curso, quando dei meus primeiros passos escrevendo códigos simples em <strong>Python</strong>. Foi ali que descobri um novo mundo — e logo em seguida, me encantei pelo desenvolvimento web. Sempre fui fascinado pelas infinitas possibilidades que a internet oferece, seja no entretenimento, na informação ou na forma como conecta pessoas e ideias.
                     </p>
                     <p className="mb-2">
                         Hoje, sigo explorando esse universo com curiosidade e dedicação. E é com esse espírito que espero que possamos trabalhar juntos, trazendo soluções criativas e presença digital para o seu projeto ou negócio.
                     </p>
-
                 </ContentBox>
                 <DisplayProjects/>
             </div>

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import React, { useRef, useState, useCallback, useEffect, useMemo} from 'react';
@@ -24,7 +26,7 @@ export const DisplayProjects = () => {
     if(swiperRef.current) {
       setSlideIndex(swiperRef.current.realIndex);
     }
-  })
+  }, [])
 
   slidesPerProject = useMemo( () => {
     return projectsData.map(project => project.imageSources.length);
